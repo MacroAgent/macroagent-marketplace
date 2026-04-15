@@ -4,6 +4,14 @@ Claude plugin marketplace for MacroAgent trading intelligence tools.
 
 ## Installation
 
+### Step 0 — Install uv (if not already installed)
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+`uv` is required to run the MCP server. Restart your terminal after installing.
+
 ### Step 1 — Add this marketplace to Claude
 
 ```bash
@@ -16,14 +24,15 @@ claude plugin marketplace add MacroAgent/macroagent-marketplace
 claude plugin install btc-orderflow-mcp@macroagent-marketplace
 ```
 
-### Step 3 — Configure environment variables
-
-The plugin requires two environment variables. Add them to your shell profile (`~/.zshrc` or `~/.bashrc`):
+### Step 3 — Set your API key (persistent)
 
 ```bash
-export BTC_MCP_API_URL="https://macroagent.ai"
-export BTC_MCP_API_KEY="your-api-key"
+echo 'export BTC_MCP_API_URL="https://macroagent.ai"' >> ~/.zshrc
+echo 'export BTC_MCP_API_KEY="your-api-key-here"' >> ~/.zshrc
+source ~/.zshrc
 ```
+
+> Bash users: replace `~/.zshrc` with `~/.bashrc`.
 
 Then restart Claude.
 
