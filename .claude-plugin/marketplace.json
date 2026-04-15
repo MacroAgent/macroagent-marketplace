@@ -1,0 +1,21 @@
+{
+  "name": "macroagent-marketplace",
+  "owner": {
+    "name": "MacroAgent",
+    "email": "cto@macroagent.ai"
+  },
+  "metadata": {
+    "description": "MacroAgent trading intelligence tools for Claude"
+  },
+  "plugins": [
+    {
+      "name": "btc-orderflow-mcp",
+      "source": {
+        "type": "github",
+        "repo": "MacroAgent/btc-orderflow-mcp"
+      },
+      "description": "Real-time BTC order flow analysis — hourly CVD, AI reports via MacroAgent MCP",
+      "version": "0.1.0"
+    }
+  ]
+}
